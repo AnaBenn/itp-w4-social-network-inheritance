@@ -17,13 +17,8 @@ class User(object):
             for post in follow.posts:
                 timeline.append(post)
         return sorted(timeline, key=lambda post: post.timestamp, reverse=False)
-        #  sorted(time, key=lambda student: student.age)
-        #sort by timestamp when done with posts.py  https://wiki.python.org/moin/HowTo/Sorting  THANKS :)
 
     def follow(self, other):
         #users you are following
         self.following.append(other)
 
-
-# [User1post, user1post2, user2post, user3post, user3post2]
-# [[user1post, user1post2], [user2post], ]
